@@ -1,11 +1,11 @@
-from django.shortcuts import render
-
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Blog
 # Create your views here.
 
 def Home(request):
-    return render(request,'home.html')
+    blogs= Blog.objects.all()
+    return render(request,'blogs/home.html',{'blogs':blogs})
 
 def About(request):
     content={
@@ -16,7 +16,7 @@ def About(request):
             'database':'MongoDB',
         }
     }
-    return render(request,'about.html',content)
+    return render(request,'blogs/about.html',content)
 
 def Contact(request):
-    return render(request,'contact.html')
+    return render(request,'blog/contact.html')
