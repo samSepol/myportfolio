@@ -1,5 +1,7 @@
+{% load static %}
 
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -34,7 +36,8 @@
     
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">Bynry</a>
+          <img src="{%static 'images/bynry.png'%}" width="50px" alt="">
+          {% comment %} <a class="navbar-brand" href="{% static 'images/byrny.png'%}">Bynry</a> {% endcomment %}
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +51,7 @@
               </li>
               
               <li class="nav-item">
-                <a class="nav-link">Instagram</a>
+                <a class="nav-link" href="{% static 'images/resume.pdf'%}">Resume</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/blog">Blog</a>
@@ -66,6 +69,7 @@
         </div>
       </nav>
 
+
 <main>
 
   <section class="py-5 text-center container">
@@ -74,8 +78,10 @@
         <h1 class="fw-light">Sam Sepiol</h1>
         <p class="lead text-muted">Hi I am sam sepiol working as software engineer. Currently i am working on Django Framework.</p>
         <p>
+          <img src="{% static 'images/angular.png'%}"class="img-fluid" alt="">
           <a href="mailto:samsepiol@gmail.com" class="btn btn-primary my-2">Email Me </a>
-          <a href="#" class="btn btn-success my-2">Secondary action</a>
+          {% comment %} <a href="#" class="btn btn-success my-2">Secondary action</a> {% endcomment %}
+
         </p>
       </div>
     </div>

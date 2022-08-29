@@ -126,11 +126,23 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 
+# specific location for our static files
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-MEDIA_URL = '/media/'
+STATICFILES_DIRS =[
+    os.path.join(BASE_DIR,'portfolio/static')
+]
+
+
+
+# for static folder (Css,js)
 STATIC_ROOT=os.path.join(BASE_DIR,'static')
 STATIC_URL = '/static/'
+
+
+# for media folder(apps images,files)
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 
 
 # Default primary key field type

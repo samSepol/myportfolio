@@ -16,3 +16,6 @@ class Blog(models.Model):
     
     def __str__(self):
         return f'{self.title}  |  {self.author}   | {self.date}  | {self.time}'
+
+    def summary(self):
+        return f'{self.description[:100]}...'
